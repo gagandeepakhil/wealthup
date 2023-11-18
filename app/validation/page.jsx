@@ -4,7 +4,7 @@ import styles from "./page.module.css";
 import { useState } from "react";
 
 export default function Validation() {
-  const [code, setCode] = useState("click on refresh to generate code");
+  const [code, setCode] = useState("click on refresh");
   const [incode, setinCode] = useState("");
   const [message, setMessage] = useState("");
 
@@ -53,7 +53,7 @@ export default function Validation() {
   return (
     <div className={styles.validation}>
       <div className={styles.container}>
-        <h2>{code}</h2>
+        <h4>{code}</h4>
         <button onClick={handleRefresh}>Refresh code</button>
         <br />
         <input type="text" value={incode} onChange={(e) => setinCode(e.target.value)}
